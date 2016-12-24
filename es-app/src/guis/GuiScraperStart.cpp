@@ -6,6 +6,7 @@
 #include "components/TextComponent.h"
 #include "components/OptionListComponent.h"
 #include "components/SwitchComponent.h"
+#include "Settings.h"
 
 GuiScraperStart::GuiScraperStart(Window* window) : GuiComponent(window),
 	mMenu(window, "SCRAPE NOW")

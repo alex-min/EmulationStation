@@ -1,6 +1,10 @@
 #pragma once
 #include <string>
 #include <map>
+#include <locale.h>
+#include <unistd.h>
+
+#define _(str) gettext(str)
 
 //This is a singleton for storing settings.
 class Settings

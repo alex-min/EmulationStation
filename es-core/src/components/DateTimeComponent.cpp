@@ -3,6 +3,7 @@
 #include "Window.h"
 #include "Log.h"
 #include "Util.h"
+#include "Settings.h"
 
 DateTimeComponent::DateTimeComponent(Window* window, DisplayMode dispMode) : GuiComponent(window), 
 	mEditing(false), mEditIndex(0), mDisplayMode(dispMode), mRelativeUpdateAccumulator(0), 
@@ -226,7 +227,7 @@ std::string DateTimeComponent::getDisplayString(DisplayMode mode) const
 	}
 	
 	if(mTime == boost::posix_time::not_a_date_time)
-		return "unknown";
+		return _("unknown");
 
 	boost::posix_time::time_facet* facet = new boost::posix_time::time_facet();
 	facet->format(fmt.c_str());

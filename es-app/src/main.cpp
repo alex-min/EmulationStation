@@ -157,6 +157,10 @@ void onExit()
 
 int main(int argc, char* argv[])
 {
+	setlocale(LC_ALL, "");
+  	bindtextdomain("emulationstation", "locale");
+  	textdomain("emulationstation");
+
 	unsigned int width = 0;
 	unsigned int height = 0;
 

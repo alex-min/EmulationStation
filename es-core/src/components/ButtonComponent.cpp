@@ -3,6 +3,7 @@
 #include "Window.h"
 #include "Util.h"
 #include "Log.h"
+#include "Settings.h"
 
 ButtonComponent::ButtonComponent(Window* window, const std::string& text, const std::string& helpText, const std::function<void()>& func) : GuiComponent(window),
 	mBox(window, ":/button.png"),
@@ -40,7 +41,7 @@ bool ButtonComponent::input(InputConfig* config, Input input)
 
 void ButtonComponent::setText(const std::string& text, const std::string& helpText)
 {
-	mText = strToUpper(text);
+	mText = std::string(_(strToUpper(text).c_str()));
 	mHelpText = helpText;
 	
 	mTextCache = std::unique_ptr<TextCache>(mFont->buildTextCache(mText, 0, 0, getCurTextColor()));

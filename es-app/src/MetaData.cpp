@@ -2,6 +2,7 @@
 #include "components/TextComponent.h"
 #include "Log.h"
 #include "Util.h"
+#include "Settings.h"
 
 namespace fs = boost::filesystem;
 
@@ -14,10 +15,10 @@ MetaDataDecl gameDecls[] = {
 	{"marquee",		MD_PATH,				"", 				false,		"marquee",				"enter path to marquee"},
 	{"thumbnail",	MD_PATH,				"", 				false,		"thumbnail",			"enter path to thumbnail"},
 	{"rating",		MD_RATING,				"0.000000", 		false,		"rating",				"enter rating"},
-	{"releasedate", MD_DATE,				"not-a-date-time", 	false,		"release date",			"enter release date"},
-	{"developer",	MD_STRING,				"unknown",			false,		"developer",			"enter game developer"},
-	{"publisher",	MD_STRING,				"unknown",			false,		"publisher",			"enter game publisher"},
-	{"genre",		MD_STRING,				"unknown",			false,		"genre",				"enter game genre"},
+	{"releasedate", MD_DATE,				_("not-a-date-time"), 	false,		"release date",			"enter release date"},
+	{"developer",	MD_STRING,				_("unknown"),			false,		"developer",			"enter game developer"},
+	{"publisher",	MD_STRING,				_("unknown"),			false,		"publisher",			"enter game publisher"},
+	{"genre",		MD_STRING,				_("unknown"),			false,		"genre",				"enter game genre"},
 	{"players",		MD_INT,					"1",				false,		"players",				"enter number of players"},
 	{"playcount",	MD_INT,					"0",				true,		"play count",			"enter number of times played"},
 	{"lastplayed",	MD_TIME,				"0", 				true,		"last played",			"enter last played date"}

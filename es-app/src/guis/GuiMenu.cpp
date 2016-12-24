@@ -20,7 +20,7 @@
 #include "scrapers/GamesDBScraper.h"
 #include "scrapers/TheArchiveScraper.h"
 
-GuiMenu::GuiMenu(Window* window) : GuiComponent(window), mMenu(window, "MAIN MENU"), mVersion(window)
+GuiMenu::GuiMenu(Window* window) : GuiComponent(window), mMenu(window, _("MAIN MENU")), mVersion(window)
 {
 	// MAIN MENU
 
@@ -274,7 +274,7 @@ void GuiMenu::addEntry(const char* name, unsigned int color, bool add_arrow, con
 	
 	// populate the list
 	ComponentListRow row;
-	row.addElement(std::make_shared<TextComponent>(mWindow, name, font, color), true);
+	row.addElement(std::make_shared<TextComponent>(mWindow, _(name), font, color), true);
 
 	if(add_arrow)
 	{

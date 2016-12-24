@@ -1,5 +1,6 @@
 #include "components/MenuComponent.h"
 #include "components/ButtonComponent.h"
+#include "Settings.h"
 
 #define BUTTON_GRID_VERT_PADDING 32
 #define BUTTON_GRID_HORIZ_PADDING 10
@@ -20,7 +21,7 @@ MenuComponent::MenuComponent(Window* window, const char* title, const std::share
 	mTitle = std::make_shared<TextComponent>(mWindow);
 	mTitle->setAlignment(ALIGN_CENTER);
 	mTitle->setColor(0x555555FF);
-	setTitle(title, titleFont);
+	setTitle(_(title), titleFont);
 	mGrid.setEntry(mTitle, Vector2i(0, 0), false);
 
 	// set up list which will never change (externally, anyway)
@@ -79,7 +80,7 @@ void MenuComponent::onSizeChanged()
 
 void MenuComponent::addButton(const std::string& name, const std::string& helpText, const std::function<void()>& callback)
 {
-	mButtons.push_back(std::make_shared<ButtonComponent>(mWindow, strToUpper(name), helpText, callback));
+	mButtons.push_back(std::make_shared<ButtonComponent>(mWindow, _(strToUpper(name).c_str()), _(helpText.c_str()), callback));
 	updateGrid();
 	updateSize();
 }
