@@ -18,9 +18,6 @@ TextComponent::TextComponent(Window* window, const std::string& text, const std:
 	setFont(font);
 	setColor(color);
 	char* tr = gettext(text.c_str());
-	if (!strcmp(text.c_str(), tr))  {
-		printf("No translations found for '%s'\n", text.c_str());
-	}
 	setText(tr);
 	setPosition(pos);
 	setSize(size);
