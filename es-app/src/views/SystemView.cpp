@@ -181,7 +181,7 @@ void SystemView::onCursorChanged(const CursorState& state)
 			ss << "CONFIGURATION";
 		// only display a game count if there are at least 2 games
 		else if(gameCount > 1)
-			ss << gameCount << " GAMES AVAILABLE";
+			ss << gameCount << _(" GAMES AVAILABLE");
 
 		mSystemInfo.setText(ss.str()); 
 	}, false, 1);
