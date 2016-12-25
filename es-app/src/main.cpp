@@ -158,7 +158,7 @@ void onExit()
 int main(int argc, char* argv[])
 {
 	setlocale(LC_ALL, "");
-  	bindtextdomain("emulationstation", "locale");
+  	bindtextdomain("emulationstation", "/usr/share/locale");
   	textdomain("emulationstation");
 
 	unsigned int width = 0;

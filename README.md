@@ -6,7 +6,8 @@ A cross-platform graphical front-end for emulators with controller navigation.
 Project website: http://emulationstation.org
 
 **Raspberry Pi users:**
-A cool guy named petrockblog made a script which automatically installs many emulators and ES. It also includes options for configuring your RPi and setting it up to boot directly into ES. You can find it here: https://github.com/petrockblog/RetroPie-Setup
+A cool guy named petrockblog made a script which automatically installs many emulators and ES.
+It also includes options for configuring your RPi and setting it up to boot directly into ES. You can find it here: https://github.com/petrockblog/RetroPie-Setup
 
 Download
 ========
@@ -41,10 +42,7 @@ EmulationStation has a few dependencies. For building, you'll need CMake, SDL2, 
 **On Debian/Ubuntu:**
 All of this be easily installed with apt-get:
 ```bash
-sudo apt-get install libsdl2-dev libboost-system-dev libboost-filesystem-dev libboost-date-time-dev \
-  libboost-locale-dev libfreeimage-dev libfreetype6-dev libeigen3-dev libcurl4-openssl-dev \
-  libasound2-dev libgl1-mesa-dev build-essential cmake fonts-droid \
-  libvlc-dev libvlccore-dev vlc-nox
+sudo apt-get install libsdl2-dev libboost-system-dev libboost-filesystem-dev libboost-date-time-dev libboost-locale-dev libfreeimage-dev libfreetype6-dev libeigen3-dev libcurl4-openssl-dev libasound2-dev libgl1-mesa-dev build-essential cmake fonts-droid
 ```
 
 Then, generate and build the Makefile with CMake:
